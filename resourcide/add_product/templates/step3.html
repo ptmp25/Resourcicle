@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'style_step3.css' %}">
+{% endblock link %}
+
+{%block step1%}
+    <div class="stepper-item completed">
+{%endblock%}
+
+{%block step2%}
+    <div class="stepper-item completed">
+{%endblock%}
+
+{%block step3%}
+    <div class="stepper-item active">
+{%endblock%}
+
+{%block step4%}
+    <div class="stepper-item ">
+{%endblock%}
+
+{%block content%}
+<div class="component">
+    <div class="title">Photos</div>
+    <div class="photo-tips">
+      <p class="subtitle">Tips</p>
+      <ul>
+        <li>Add as many as you can so buyers can see every detail.</li>
+        <li>Use daylight, no flash.</li>
+        <li>Put something common nearby for size.</li>
+        <li>Shoot against a clear backdrop.</li>
+        <li>Include pictures of different choices.</li>
+      </ul>
+    </div>
+    <div class="overlap-group">
+      <div class="rectangle">
+        <div class="text-wrapper-5">Add a photo</div>
+        <div class="text-wrapper-6">+</div>
+      </div>
+  </div>
+</div>  
+  <div class="button-line">
+    <a href="{% url 'second_step' %}" ><button class="back btn"> ← BACK</button></a>
+    <a href="{% url 'fourth_step' %}" ><button class="btn">NEXT → </button></a>
+  </div>
+{%endblock%}
